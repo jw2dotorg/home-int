@@ -48,9 +48,9 @@ server:
   allowAnyNamespace: true
   ingress:
     enabled: true
-    ingressClassName: external
+    ingressClassName: internal
     annotations:
-      external-dns.alpha.kubernetes.io/target: "external.#{ cloudflare.domain }#"
+      external-dns.alpha.kubernetes.io/target: "internal.#{ cloudflare.domain }#"
     hostname: "argo.#{ cloudflare.domain }#"
   metrics:
     enabled: true
