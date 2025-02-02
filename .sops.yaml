@@ -5,13 +5,13 @@ creation_rules:
     mac_only_encrypted: true
     key_groups:
       - age:
-          - "age1vntqr796ff4ql0rd0j5y7z8e2750uejm4v6kymleqlyeldt9yyvs4xv7e0"
+          - "age1dzpk0zfneupvk2a8d0wu6n8n3deqkl2r7lpd7t3ln028zfcrqpgqv80w9d"
   - path_regex: kubernetes/.*\.sops\.ya?ml
     encrypted_regex: "^(data|stringData)$"
     mac_only_encrypted: true
     key_groups:
       - age:
-          - "age1vntqr796ff4ql0rd0j5y7z8e2750uejm4v6kymleqlyeldt9yyvs4xv7e0"
+          - "age1dzpk0zfneupvk2a8d0wu6n8n3deqkl2r7lpd7t3ln028zfcrqpgqv80w9d"
 stores:
   yaml:
     indent: 2
