@@ -1,65 +1,30 @@
-# ⛵ Cluster Template
+# Home Integration Cluster
 
-Welcome to my opinionated and extensible template for deploying a single Kubernetes cluster. The goal of this project is to make it easier for people interested in using Kubernetes to deploy a cluster at home on bare-metal or VMs. This template closely mirrors onedr0p [cluster-template](https://github.com/onedr0p/cluster-template) repository.
+At a high level this project makes use of [makejinja](https://github.com/mirkolenz/makejinja) to read in a [configuration file](./config.sample.yaml) which renders out templates to install and manage a cluster.
 
-At a high level this project makes use of [makejinja](https://github.com/mirkolenz/makejinja) to read in a [configuration file](./config.sample.yaml) which renders out templates that will allow you to install and manage your Kubernetes cluster with.
+- [Talos Linux](https://github.com/siderolabs/talos)
 
-## ✨ Features
+    - **Components:** [argo](https://github.com/argoproj/argo-cd), [cilium](https://github.com/cilium/cilium), [cert-manager](https://github.com/cert-manager/cert-manager), [spegel](https://github.com/spegel-org/spegel), [reloader](https://github.com/stakater/Reloader), and [openebs](https://github.com/openebs/openebs)
+    - Dev env managed w/ [mise](https://mise.jdx.dev/)
+    - Workflow automation w/ [GitHub Actions](https://github.com/features/actions)
+    - Dependency automation w/ [Renovate](https://www.mend.io/renovate)
 
-The features included will depend on the type of configuration you want to use. There are currently **2 different types** of **configurations** available with this template.
-
-1. **"Argo cluster"** - a Kubernetes cluster deployed on-top of [Talos Linux](https://github.com/siderolabs/talos) with an opinionated implementation of [Argo](https://github.com/argoproj/argo-cd) using [GitHub](https://github.com/) as the Git provider and [sops](https://github.com/getsops/sops) to manage secrets.
-
-    - **Required:** Some knowledge of [Containers](https://opencontainers.org/), [YAML](https://yaml.org/), and [Git](https://git-scm.com/).
-    - **Components:** [argo](https://github.com/argoproj/argo-cd), [cilium](https://github.com/cilium/cilium), [cert-manager](https://github.com/cert-manager/cert-manager), [spegel](https://github.com/spegel-org/spegel), [reloader](https://github.com/stakater/Reloader), and [openebs](https://github.com/openebs/openebs).
-
-2. **"Argo cluster with Cloudflare"** - An addition to "**Argo cluster**" that provides DNS and SSL with [Cloudflare](https://www.cloudflare.com/). [Cloudflare Tunnel](https://www.cloudflare.com/products/tunnel/) is also included to provide external access to certain applications deployed in your cluster.
-
-    - **Required:** A Cloudflare account with a domain managed in your Cloudflare account.
-    - **Components:** [ingress-nginx](https://github.com/kubernetes/ingress-nginx/), [external-dns](https://github.com/kubernetes-sigs/external-dns) and [cloudflared](https://github.com/cloudflare/cloudflared).
-
-**Other features include:**
-
-- Dev env managed w/ [mise](https://mise.jdx.dev/)
-- Workflow automation w/ [GitHub Actions](https://github.com/features/actions)
-- Dependency automation w/ [Renovate](https://www.mend.io/renovate)
-
-## 🚀 Let's Go!
-
-There are **4 stages** outlined below for completing this project, make sure you follow the stages in order.
 
 ### Stage 1: Machine Preparation
 
-**System Requirements**
+1. Create ISO from [Talos Linux Image Factory](https://factory.talos.dev). Be sure to only choose the **bare-minimum system extensions** as some might require additional configuration and prevent Talos from booting without it. You can always add system extensions after Talos is installed and working.
 
-> [!IMPORTANT]
-> 1. The included behaviour of Talos is that all nodes are able to run workloads, **including** the controller nodes. **Worker nodes** are therefore **optional**.
-> 2. Do you have 3 or more nodes? It is highly recommended to make 3 of them controller nodes for a highly available control plane.
-> 3. Running the cluster on Proxmox? My thoughts and recommendations about that are [here](https://onedr0p.github.io/home-ops/archive/proxmox-considerations.html).
+2. Download a Talos Linux ISO file. Make sure to note the **schematic ID**.
 
-| Role    | Cores    | Memory        | System Disk               |
-|---------|----------|---------------|---------------------------|
-| Control | 4 _(6*)_ | 8GB _(24GB*)_ | 120GB _(500GB*)_ SSD/NVMe |
-| Worker  | 4 _(6*)_ | 8GB _(24GB*)_ | 120GB _(500GB*)_ SSD/NVMe |
-| _\* recommended_ |
-
-1. Head over to the [Talos Linux Image Factory](https://factory.talos.dev) and follow the instructions. Be sure to only choose the **bare-minimum system extensions** as some might require additional configuration and prevent Talos from booting without it. You can always add system extensions after Talos is installed and working.
-
-2. This will eventually lead you to download a Talos Linux ISO file (or for SBCs the RAW file). Make sure to note the **schematic ID** you will need this later on.
-
-3. Flash the Talos ISO or RAW file to a USB drive and boot from it on your nodes.
+3. Build cluster nodes and boot the Talos ISO.
 
 ### Stage 2: Local Workstation
 
-1. Create a new **public** repository by clicking the big green "Use this template" button at the top of this page.
+1. Create a new **public** repository by cloning this repo.
 
 2. Use `git clone` to download **the repo you just created** to your local workstation and `cd` into it.
 
-3. **Install** and **activate** [mise](https://mise.jdx.dev/) following the instructions for your workstation [here](https://mise.jdx.dev/getting-started.html).
-
-4. Use `mise` to install the **required** CLI tools:
-
-   📍 _If `mise` is having trouble compiling Python, try running `mise settings python.compile=0` and try these commands again_
+3. **Install** and **activate** [mise](https://mise.jdx.dev/) for the **required** CLI tools:
 
     ```sh
     mise trust
@@ -69,12 +34,7 @@ There are **4 stages** outlined below for completing this project, make sure you
 
 ### Stage 3: Template Configuration
 
-> [!IMPORTANT]
-> The [config.sample.yaml](./config.sample.yaml) file contains config that are **vital** to the template process.
-
 1. Generate the `config.yaml` from the [config.sample.yaml](./config.sample.yaml) configuration file:
-
-   📍 _If the below command fails `mise` is either not install or configured incorrectly._
 
     ```sh
     task init
