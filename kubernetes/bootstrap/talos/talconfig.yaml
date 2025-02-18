@@ -15,7 +15,7 @@ clusterSvcNets:
 
 additionalApiServerCertSans: &sans
   - "172.16.0.87"
-  - "home-int.jw2.org"
+  - "home-int.three14creations.com"
   - "127.0.0.1"
 additionalMachineCertSans: *sans
 

@@ -21,7 +21,7 @@ sources:
 txtPrefix: k8s.
 txtOwnerId: default
 domainFilters:
-  - jw2.org
+  - three14creations.com
 serviceMonitor:
   enabled: true
 podAnnotations:
@@ -35,14 +35,14 @@ sops:
     - recipient: age1dzpk0zfneupvk2a8d0wu6n8n3deqkl2r7lpd7t3ln028zfcrqpgqv80w9d
       enc: |
         -----BEGIN AGE ENCRYPTED FILE-----
-        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBIUmkycXBYTmFpbHNrNlJ5
-        bXNxYjFPM3VVTlE2ZEdtL3VjdThtckxPcEEwClRXYSsxZHJmSG1tNkRrcDdkTXlt
-        ZDdlUUIxK0I1VGVtOEVOWXh1UjNpL1kKLS0tIEtkbmFCMTNmMFEvUytadGxLMHcw
-        Z3A4U1BwbEE4S2IzTDFsdmluQndhTlUK6bOJbjf6O1QvWiDKMRfdR3ucIyLNGrXM
-        qFm/JhrkeodgIga5WHpfJR7leLGHa12R8VWd0FuFd5vHBgiazxJB7Q==
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA0eWNPMHVlZkpJNVBhRjg2
+        RGhHS3Y0NjZtTGFtOWVhYlVDUnpiS1N6c1VZClZEcE1wcGg5NWpxNGxyd2FYUG1B
+        ek94dURGVVdkQU9aRlVFL2poRG82SkEKLS0tIG0wQWJXbEYrVkZ0UFRrVVZLNlpG
+        NXVvUXlESlVwVWhoM3VlRkhGTWpwY1kK6WpW+6/oDa4BTUr2R+mzyGfvq2RjZge/
+        /ZaUr01Oys72xB2T8w2tbsEt/gDeVry5fOy3vtIDflCvqEJjTmqBgg==
         -----END AGE ENCRYPTED FILE-----
-  lastmodified: "2025-02-18T04:26:52Z"
-  mac: ENC[AES256_GCM,data:CtEPnl2AvX7bqSgExk+kZ/k4uUXVNdGe3ZrkI8aobM0K9/YelQL30nAJJRmFZCGKsvZwP4EO3Ll9rGlM8MXoIBVDXWKMoBG+w1WLX3jaZqwdb00y7f5DFv8/eR+1Cn2lsJmWayR4S1zYZk/bTeP94Uinui+3fwCpVUIYvfz6Y4w=,iv:qABCC37AeNPBwIAI9mbGMf5TS7VCA0RlGZw1aGaFQ7w=,tag:HH3sz6s1rxm8zNB5mvsLfA==,type:str]
+  lastmodified: "2025-02-18T05:00:59Z"
+  mac: ENC[AES256_GCM,data:xqYc7HbSQh8nLU1sOJqYK9LFTFv2W/NuwiVv6SKMQ8zvUJ3uj/9YZ5SfFNamFdhFgNJPGqutlsxzzOXW77HbR2wA4qMNRGAgAkGDECI5J1KF4B7/t+Wz5s4/zEcB/dsQ1WBUDJ4oqCB7DSlMlAd+XBidsQZfK44dHO4ETWSxruQ=,iv:OnPOacY1+ulhwrHT+U7t0zd/6+liMxmaKclmZprupog=,tag:I51+HwhDSugHPEJ9RlTf4A==,type:str]
   pgp: []
   encrypted_regex: ^(data|stringData)$
   mac_only_encrypted: true

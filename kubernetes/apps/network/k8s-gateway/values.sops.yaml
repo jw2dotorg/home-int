@@ -1,5 +1,5 @@
 fullnameOverride: k8s-gateway
-domain: jw2.org
+domain: three14creations.com
 ttl: 1
 service:
   type: LoadBalancer
@@ -19,14 +19,14 @@ sops:
     - recipient: age1dzpk0zfneupvk2a8d0wu6n8n3deqkl2r7lpd7t3ln028zfcrqpgqv80w9d
       enc: |
         -----BEGIN AGE ENCRYPTED FILE-----
-        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAwTjdORzM0ME5hM3VCQis5
-        b25aeUt1Zlh0eHd2S3I0bTdUazR3Wkg0dFhvCkZZL1dpbTZ6TmhVa0F5K1ZWcGJt
-        M3lqR3k1WFRoQ3h3MnFhTkt6bnBRWXMKLS0tIEdhMy8xWW8vL0Q0TVhjUnoyMVAx
-        ZFd6OEF4Mk5SSW5ub2VPbVJTa0Q4L2MKtkkETbJv/Kh70xwldxV5sExFeawpi7QE
-        Z2R1Yhkh8OMdZJeQCsewrraOWwrjkfegk2WqJpQIj14Pq5k9kIPc9w==
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA5MUNreFlmclhHbHQwbFc1
+        QVdDa09rVGIrRFBHZXBXdEU5YUcwbG96U2drCjF6Vk0wQi9DdUcyVCtRK2pZbVRT
+        ejFkWFlXVWdkNmJGVDZNMUJaeDRoZ28KLS0tIFl1V1p2Q3dkVmZFSlA2Y0N1T0Fo
+        Z2k2alNkR1JDUGR0a09mNC9jb01tVzgK8y73GX7A/+OcmjShzOXlz5OkLc/YCDE9
+        o2GoWV5FmLBZWYLRiiqY6OBF0ldXWcqi04nZQ2wbeBcP8QCocpoo5g==
         -----END AGE ENCRYPTED FILE-----
-  lastmodified: "2025-02-18T04:26:53Z"
-  mac: ENC[AES256_GCM,data:GulmDHbvyoBSaMj4o6ABK7Me5Ra3niGiYfnUK1drkZrACb1YdEPeIFtn6AwoGt/7NzABGeMmEly/FSwCaHkayE4gCEFeZpHhxT3/OqbJw/FWqwXAw5npwmjvrZRrprDx8egjZRGEXVxzTRKHBI4jHp9mLeUZpjQT7gpiCrT3Xos=,iv:7odg3572wksgwf3qJpB8lYzuhbxvrN8iJOiJ11xZqnA=,tag:HIV2EfQGpsrOZKj+zXexiQ==,type:str]
+  lastmodified: "2025-02-18T05:01:00Z"
+  mac: ENC[AES256_GCM,data:AjPH+yma/T5UumGAyHsrjLqKnw4/4xNXFHHM0FjIv8sdrhcZ4GTrfJofIBlD0BdfcCYXwckIaCOOzc5XB+J9Sf+77AKZ9hpXdJQ2bP6UHtmNz0MjkXqpR2IOfpC+DPy4f3ESzVnLZfkCSCqM9s3jL3ucvm2D8BWXndZ8BbMZHjY=,iv:KARvePLqNE7sFGapKv20ZtN2LAc6w1ob5Em3fKqgKvY=,tag:pF/wsuK1SwdAf+DHyC/TIA==,type:str]
   pgp: []
   encrypted_regex: ^(data|stringData)$
   mac_only_encrypted: true

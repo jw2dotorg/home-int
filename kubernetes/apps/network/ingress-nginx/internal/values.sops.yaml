@@ -45,7 +45,7 @@ controller:
       namespaceSelector:
         any: true
   extraArgs:
-    default-ssl-certificate: network/jw2-org-staging-tls
+    default-ssl-certificate: network/three14creations-com-staging-tls
   resources:
     requests:
       cpu: 100m
@@ -60,14 +60,14 @@ sops:
     - recipient: age1dzpk0zfneupvk2a8d0wu6n8n3deqkl2r7lpd7t3ln028zfcrqpgqv80w9d
       enc: |
         -----BEGIN AGE ENCRYPTED FILE-----
-        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB2V0Q3U1liOXo1REtFTk5X
-        S1kwQUpHTE1PSWp0U09heUgwTWRSNzFkZ0V3CjlSWXh6NVg1bHRnYTBMYW4yOUcr
-        SmdqT3JCaTBFc09pMmhtNmxSQ1J0MzQKLS0tIGJuV2RDVjF6VlIvVnI3Y0Q3NXJm
-        L3BIbk1XYlhYaW1IZElVTnprU1JVSjgKOUtYH9kx46Cfc2Pw5ykLkO+jfLFkmh9W
-        KGJ9wZg9LRcBaMDbr974e+MecZEYa0QtEPwmfZqSJl+f3IEteM8VEA==
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB2clkzUnV2UDlOaVFLYnBQ
+        bmkyM0k0dHRMZ01kN1dsNkpxd3ZwUFd1SVFzCjk5Rm5ZbHYzYlBqellMeG42RjJU
+        MlFHaUo3cVFLdEVsM0Q1NkR1bWNYZmMKLS0tIFQ5SFozNGZidW1OeWxzaHpQTUo2
+        c2l0Mk9QZjdVTEhKSXZUZW5hMTJuQWMKSpj9INYF9vb5Rk0Lq1cMDNXOxOF1VnVh
+        LVAcPaUsIJp2UhYUpT6+tRPe5L6n0el/xXql6l2m+2RxmkAMSsc6cw==
         -----END AGE ENCRYPTED FILE-----
-  lastmodified: "2025-02-18T04:26:53Z"
-  mac: ENC[AES256_GCM,data:c04YaeR4MjmU1llIpfAkiK3uLslqn+2AsznbzgBwJlFnQ+X+RTj7w5O2BUp3ednGj8J5fdtRJTiMg44vpDKxlcitlyAKi1kboWXMdV8h7oNdqWxZWcQLetoKog6CvZBtNYAapAPO8TzsZxvoVLJDUKwp+DrdLJLFx0ZqAiQ5iRI=,iv:YGl78gXupa2CiYhdYcyu6pm647xXA6ihyAoF4aCcVeg=,tag:GLX0RTjbjXpLf0Tnqjnjfw==,type:str]
+  lastmodified: "2025-02-18T05:01:00Z"
+  mac: ENC[AES256_GCM,data:eYGUcLAhF/FCwpA2OzcEdYVkX58Qum0bnWaBm23i+vBu2f9NvPY1D7OkWmnKnTPECQgDZa8o2b6Y17NOJPvCP7e2XbDY7Cb8tmo49HxC8KZ4fJ28JUQw9yRzptIkShzQldMvfBqEnQy9h0LrWyJjyomk/pU6cAxJDFQSZkNdOJQ=,iv:HQ6z30cxuRvKbbP7f5NypykfCD8Ylrj47DLw3suxr7s=,tag:tU2F7VR38CaZTsotFpbT3w==,type:str]
   pgp: []
   encrypted_regex: ^(data|stringData)$
   mac_only_encrypted: true

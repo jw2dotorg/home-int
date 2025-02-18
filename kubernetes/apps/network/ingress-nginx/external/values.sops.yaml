@@ -2,7 +2,7 @@ fullnameOverride: ingress-nginx-external
 controller:
   service:
     annotations:
-      external-dns.alpha.kubernetes.io/hostname: external-int.jw2.org
+      external-dns.alpha.kubernetes.io/hostname: external-int.three14creations.com
       lbipam.cilium.io/ips: 172.16.0.84
     externalTrafficPolicy: Cluster
   ingressClassResource:
@@ -44,7 +44,7 @@ controller:
       namespaceSelector:
         any: true
   extraArgs:
-    default-ssl-certificate: network/jw2-org-staging-tls
+    default-ssl-certificate: network/three14creations-com-staging-tls
   resources:
     requests:
       cpu: 100m
@@ -59,14 +59,14 @@ sops:
     - recipient: age1dzpk0zfneupvk2a8d0wu6n8n3deqkl2r7lpd7t3ln028zfcrqpgqv80w9d
       enc: |
         -----BEGIN AGE ENCRYPTED FILE-----
-        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBRUXJPR0pSRnRCb0dsb0I4
-        TmZsNVFwaS83b2NqTnhNRzdPR05xM29wUWlBCitjTGh0VWtxaE80aE80aHhZb3JB
-        MXVuQmprcXBIS3NzemhoWlRDd1c3YTQKLS0tIENLOURua21mTzZpb2JoNUcwc3Qx
-        TGg4cDU1NENtVXpvQVVVZ0h5MjFkYlkK0zNtqSMtbiVYLRd/6p8DU/Rh7W6ZxCLG
-        dPvpt5cb7Q37QEsCabzrWuhGWuP/HNMzgKcA4ctYlSqobqFzHLu1gQ==
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBxSnMvbTZMNUFpYkpLeEp0
+        MVlkOVFoakY4OTZrRlNkd29JamV1TnRtcEIwClVqclhkbjk5cWpVc0FtQmw5VXkx
+        NTY3ZjFiUExxZThLVDBzdmNVL3BoeWMKLS0tIE8wNXFEYi9CVGNuSkJOKzVVSlJh
+        U2g3UTlQZEtOME5idWQzZVlwNHNXdTAK30C70RKQBZfb1yDqd76r0Zk6vliGzW/9
+        LJf8fWiVlZX1yZR+9YMwU4vEjP5IefWSJURqoZtdliORcgNU1xk5Qw==
         -----END AGE ENCRYPTED FILE-----
-  lastmodified: "2025-02-18T04:26:52Z"
-  mac: ENC[AES256_GCM,data:alVVBPVT7efmbDe5IhjJOH2fTo9/8JijhUKttiMAunhhrDN1cqhg7s7fturQt1v4/LJVpmv1lfXzHqmH8TnU5EbczdEETnAB/C5XQCJDmqmRykd+5HXeWc4Kc8dbJbZ5uAodiw7ynr+STuGp2pYPYF+5hOihvLuAKlrxX3fyedo=,iv:fVbsrKybeAyqIPMBWW5dYipWn1c26cboBsTaUwWF9MQ=,tag:DkLJDYk4dwcN7KATprn7lA==,type:str]
+  lastmodified: "2025-02-18T05:01:00Z"
+  mac: ENC[AES256_GCM,data:2qIMpZbPrXKD6LGgc66HcXPrKK74VaV2xB3vwaJoJSUQ6KSBEGOvljUTbWIOaagYxaYIvZiYYiGg7P1kQQwwj11vn1awdRZihU3iDv7ejV+zhHHuNWXQEKKQ/8U7h3yZPMkeb1SL8ZEOxlhdmE+tdgxV16jo40PVfQlpeOrrN/s=,iv:Gx1gNy+sAvrByke95Q/32KhubAyOIc6rqksZNl8tr7o=,tag:oQjOZa9L0bIrJCyjCv3M9A==,type:str]
   pgp: []
   encrypted_regex: ^(data|stringData)$
   mac_only_encrypted: true

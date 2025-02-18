@@ -71,9 +71,9 @@ ingress:
   app:
     className: external
     annotations:
-      external-dns.alpha.kubernetes.io/target: external-int.jw2.org
+      external-dns.alpha.kubernetes.io/target: external-int.three14creations.com
     hosts:
-      - host: '{{ .Release.Name }}.jw2.org'
+      - host: '{{ .Release.Name }}.three14creations.com'
         paths:
           - path: /
             service:
@@ -88,14 +88,14 @@ sops:
     - recipient: age1dzpk0zfneupvk2a8d0wu6n8n3deqkl2r7lpd7t3ln028zfcrqpgqv80w9d
       enc: |
         -----BEGIN AGE ENCRYPTED FILE-----
-        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBwRmpyK0hIb21PcGY2UHFC
-        Y2ZJa2lJcmVNOUxBa1NpR1hwaWpwRWhUSXhnClJDY0ZyQkRqZG5kTjVBTFBtdEhB
-        Ylp4NXhSdzJtR3VvdTBlWkZ5KzUrV1UKLS0tIGcyQkpuWDFwVE84cTdoVVVqRlpr
-        bFlJWTNCOXlkbDB0bnVMdnZzTjNzNzAKusC5M1gN4ifpq1POyhk1gV8gCEK/CVc+
-        EVBVjyAXKB64Pug+QN/ackoQJWZKSBShWiYHRtE86m90Ovno8L2qNw==
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBOcVptamsvNDBDbkJZMGUv
+        UHRMZ3RnMXF2Q2NoNDlmVzczM2NobjhFbWhBCmlsMUFSb0dvNkNwVVNxaFZvN2Q0
+        YTFPZ3ZOblhLcVl6djJuNmpGUWxzczgKLS0tIGVJeDNFRDNtdUt5QlFqdmgvS0dI
+        b1pUUkdnU0lxSE5YN25QeU5zb21jb3cKEUyG738sTuOVo4g8Aq4hd5db2OO+5HGL
+        x6bDlaY6J8BHl2IxM6iPeTidVsynOj4TDemsMsFCANsA+KdLiW1xuA==
         -----END AGE ENCRYPTED FILE-----
-  lastmodified: "2025-02-18T04:26:52Z"
-  mac: ENC[AES256_GCM,data:dqIUJyEfqenX3nVwzaIs0xMavSiz+RcaoHxeQ+m+xlveUKgTxJlZyVxjsdkhuzabgtVGPtX8yCp+SKrwlM3s0s7LHdRF4MPw/kVPsrIuL4/BHh8okO8C7a22raCXogG7yWc4fUHv3DGa4oq77BnU23qAxRrIPs3gY8u6KZIv0o0=,iv:y4IoCYWlnJwn1mt74MemOSJE+2n5uwpgFKKnYyUHmFE=,tag:Sz9QuTKJjD31yNH/5cYeQg==,type:str]
+  lastmodified: "2025-02-18T05:00:59Z"
+  mac: ENC[AES256_GCM,data:FZ7nxxcTeIq+q+PTKJjk63T33zy+y0G9T5lsotc9gyxb5auc4S5MB5ghgKena9cCDYPrdLQaB718ONnRwGDk43qffMU3k6zIfHoy8fWUMZjsdpORZLodUuaG3Jw8fNwwjjwJkLOOcA5UJCNIOXKbJtYGnZrNChdWe4DTGdjRtNg=,iv:2LaQwH4ltTfzS3kRXZeEBzfELxRRSMlq6WgH41JFPoU=,tag:fJKvd3qo0R4ImOayT+DGaw==,type:str]
   pgp: []
   encrypted_regex: ^(data|stringData)$
   mac_only_encrypted: true

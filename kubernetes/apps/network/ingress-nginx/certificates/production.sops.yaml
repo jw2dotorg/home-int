@@ -1,16 +1,16 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: jw2-org-production
+  name: three14creations-com-production
 spec:
-  secretName: jw2-org-production-tls
+  secretName: three14creations-com-production-tls
   issuerRef:
     name: letsencrypt-production
     kind: ClusterIssuer
-  commonName: jw2.org
+  commonName: three14creations.com
   dnsNames:
-    - jw2.org
-    - '*.jw2.org'
+    - three14creations.com
+    - '*.three14creations.com'
 sops:
   kms: []
   gcp_kms: []
@@ -20,14 +20,14 @@ sops:
     - recipient: age1dzpk0zfneupvk2a8d0wu6n8n3deqkl2r7lpd7t3ln028zfcrqpgqv80w9d
       enc: |
         -----BEGIN AGE ENCRYPTED FILE-----
-        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBCWGJVQkJHNk1aYUdCVVgv
-        eTRBSVArdUYzaHVlakJwaWN2TzE5bnNFVEI0CmJ0QWw0Nk9ibFNVMkhMdkpIbFlD
-        UWxYbjY5bGJnNGJaWWZBZXJUOWJoMVUKLS0tIG1iS2ZDVTNTbGpmWWY0Vm4yN3la
-        UHcrVzJkT1diNzJFYldJdElEUzdKL2sKEgJu0yDELddRY0MsaTEWwFP2AszzuCaF
-        CeRRHZ7bXNSuyUq1OqFDgNLfHf3K4dqMKCx0DVNnazRn4EcGhIDr6A==
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAxc1VIby9hLzVxaU15SGtl
+        eXNUNHRGUWFhVHZkdkJCUFV2WmMxTm9yUEhjCitjL1RuRGJaeGtVNzJ5cmQ3dEZl
+        bXVYZVo4MzJZTmJvSjVRSWVscnFuLzgKLS0tIExYRU9VV0ZyL1hYdXFLZXZNbXVH
+        NFpjMlJUZUtwcTU2T3BDd0toL2VkTnMKEgMPPaA+rRRNs/tXalXqIDchCyOtTk9k
+        gYUVFO6jFrwR+Vu/U0Kb3G9cZ6NuuEJOfyM5TkJbWZT7D8FsaBe03Q==
         -----END AGE ENCRYPTED FILE-----
-  lastmodified: "2025-02-18T04:26:52Z"
-  mac: ENC[AES256_GCM,data:vA5QvBn00N14Asji9ckKetZI8RFcdnnwZNxUjBCDejfIqpSms7G76vwhGLr5HcOxVVgUld0espPRWA418ls89WvFOFJN/M6gxTUquV3DpbrFB6qqFrYIH1mDTD2WbS8b57tJfFBNiEfPKWsQUl66AWOihQ3lNDWaMp6ZSlT7+X0=,iv:2aFiC0dRBfPOCtvxtNXwzKaedXBpiOG0jh606khPeEo=,tag:eFOmmGEKM8evwl5a49HoaA==,type:str]
+  lastmodified: "2025-02-18T05:01:00Z"
+  mac: ENC[AES256_GCM,data:WhXDaiwBnQiFgTlYOH/TzG1BGrig5LKe/1PEicqCpQNmubTfjN4v5z1tlbO1W7aem4DJrOlRZ0PnQSTnDovNcCDiIkGlrip0Nty8Wi9JEtXAvCtEuHp9M6INsYVIuo0++V7aTSEDErhyw7UZN1XR33QmNViIhjnkLuFO9w8pMMM=,iv:IsmNWMogkmQI8mPwbKUWhPk4Cb8kpf7F9CNktJB4ytU=,tag:Dzzb/8WKPk1+bhT9VbKflQ==,type:str]
   pgp: []
   encrypted_regex: ^(data|stringData)$
   mac_only_encrypted: true
