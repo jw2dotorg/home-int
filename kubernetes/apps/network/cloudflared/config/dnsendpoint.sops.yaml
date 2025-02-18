@@ -4,10 +4,10 @@ metadata:
   name: cloudflared
 spec:
   endpoints:
-    - dnsName: external.jw2.org
+    - dnsName: external-int.jw2.org
       recordType: CNAME
       targets:
-        - 42a42d5a-003b-4dd2-9c57-bf7a65072be1.cfargotunnel.com
+        - 17bfc0e9-c204-4888-a3fb-746a29e80d2b.cfargotunnel.com
 sops:
   kms: []
   gcp_kms: []
@@ -17,14 +17,14 @@ sops:
     - recipient: age1dzpk0zfneupvk2a8d0wu6n8n3deqkl2r7lpd7t3ln028zfcrqpgqv80w9d
       enc: |
         -----BEGIN AGE ENCRYPTED FILE-----
-        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBENmJqQjhxY3V0cXZmNDhX
-        MXlOMFljRDBSWER1c2lxWlh1eTRLbVRQTVNNClNwVk1aYStmRTNOS3NDZGFjV0Vz
-        WTNrZFgyeXMveHhhWDcwNUM1R1YxUUkKLS0tIDh2ZG8rOXBHMGVQL21JL2ZaK0lx
-        V05ZWUhYTk1ndzZHaUhUN29jYk8zRGcKLIEnoiqwh1a2AL81s+htOzD5eYVJ+G/X
-        QC/4w0FeOqTnXo0vCC+hCEDQBK87mZhXb+IwXFqmOk1LZW44uH4mOA==
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBWMW5QcEwyNEdnQ1o3NHNq
+        TURuZDZGOE95TjVFclJRUHdxMUV2VkZQdGdJCks3dU5Bb3lWYTh4QlJwcnhXNFNl
+        dVFQUWE2RXhMaTRKR2tTeDE2QmVia1UKLS0tIE9mTnQzR2tJZ25sdFdOdmw0dnhW
+        ZnptOUdkWHdiT1RRLzF6TUIwV1lYV28Kzbv9Va6r9qH+Jj8U+ImfMfXUflJTri8j
+        wPdsl9jHrurmNIVim9Qi8FZ8ilmENp17VqNTx5hILZxlBJTsqYh3uw==
         -----END AGE ENCRYPTED FILE-----
-  lastmodified: "2025-02-02T18:36:36Z"
-  mac: ENC[AES256_GCM,data:VN3XiG1lRug7IgbvKLMoR4ZF5KSNBnkG+sNIm8yZp3Foqdsh0Nvokg0HtSuobVKzXKCt98WaQmOsf01jwMJR5LbKodl9HzbCb3khn9blrBMMtwBaSfrLHikmofzNXf+dJm54pYpg2fWiWeDzUiRncTfKUzPlMwheX7mulg3IBSk=,iv:/kWrw4uK0JTGTAdIL9ZpX9Y+VGwrGhNtrpLtGpnuOok=,tag:85HSay2l2iGTRubAbH9UEg==,type:str]
+  lastmodified: "2025-02-18T04:26:52Z"
+  mac: ENC[AES256_GCM,data:bmgsdQpmHvpw2HFTJ7CmQDRMhBHetTrUEE14mHxPYhXzrY1wwXiQHk0TZphuHIWPqBFDiD7Vuw9qBMik2jovH/kqwgH0Eju3Nu014q53pMKcbVl84m+1OqYB6kMmkkbnkMJKcwGMKmZcrZtNfq9BCWPv2CG0cRenVymN+VB35aw=,iv:17vP8F7J/MGOxkVYmFYc2kJ7knTSEufWUHAK5K/OJX4=,tag:0BJ4IsuLlDRQkd/FmZ01uA==,type:str]
   pgp: []
   encrypted_regex: ^(data|stringData)$
   mac_only_encrypted: true

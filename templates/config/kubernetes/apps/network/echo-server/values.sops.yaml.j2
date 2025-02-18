@@ -58,7 +58,7 @@ ingress:
   app:
     className: external
     annotations:
-      external-dns.alpha.kubernetes.io/target: "external.#{ cloudflare.domain }#"
+      external-dns.alpha.kubernetes.io/target: "external-int.#{ cloudflare.domain }#"
     hosts:
       - host: "{{ .Release.Name }}.#{ cloudflare.domain }#"
         paths:

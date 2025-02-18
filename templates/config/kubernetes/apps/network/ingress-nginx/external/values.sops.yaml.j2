@@ -3,7 +3,7 @@ fullnameOverride: ingress-nginx-external
 controller:
   service:
     annotations:
-      external-dns.alpha.kubernetes.io/hostname: "external.#{ cloudflare.domain }#"
+      external-dns.alpha.kubernetes.io/hostname: "external-int.#{ cloudflare.domain }#"
       lbipam.cilium.io/ips: "#{ cloudflare.tunnel.ingress_vip }#"
     externalTrafficPolicy: Cluster
   ingressClassResource:

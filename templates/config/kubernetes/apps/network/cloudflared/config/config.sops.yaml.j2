@@ -7,7 +7,7 @@ data:
   config.yaml: |
     ---
     originRequest:
-      originServerName: "external.#{ cloudflare.domain }#"
+      originServerName: "external-int.#{ cloudflare.domain }#"
 
     ingress:
       - hostname: "#{ cloudflare.domain }#"
