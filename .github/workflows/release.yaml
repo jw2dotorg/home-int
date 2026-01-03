@@ -2,10 +2,10 @@
 # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 name: "Release"
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 0 1 * *" # 1st of every month at midnight
+#on:
+#  workflow_dispatch:
+#  schedule:
+#    - cron: "0 0 1 * *" # 1st of every month at midnight
 
 jobs:
   release:

@@ -2,10 +2,10 @@
 # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 name: "Mise"
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * *" # once a day at midnight
+#on:
+#  workflow_dispatch:
+#  schedule:
+#    - cron: "0 0 * * *" # once a day at midnight
 
 jobs:
   mise:
